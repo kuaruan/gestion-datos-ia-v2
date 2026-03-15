@@ -1,0 +1,22 @@
+name: Pipeline CI Docker Python
+
+on:
+  push:
+    branches: [ "main" ] # Se activa al subir cambios a main
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: Construir imagen Docker
+        run: |
+          docker build -t mi-app-python:latest .
+        
+      - name: Verificar imagen
+        run: docker images

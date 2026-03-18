@@ -16,4 +16,4 @@ Si el código tiene un error que impide que Docker se construya, el pipeline fal
 
 El objetivo de conectar GitHub con Render es el Despliegue Continuo (CD).
 
- En cuanto exista un git push, el servidor se actualizará solo en cuestión de segundos.
+ En cuanto exista un git push, el servidor se actualizará 
